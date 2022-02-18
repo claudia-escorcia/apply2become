@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Trust Consent - Apply to become an Academy
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+  <a href="/index.html" class="govuk-back-link">Return to application</a>
+
+  <main class="govuk-main-wrapper">
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-l">Invite a contributor</h1>
+        <p class="govuk-body">Copy this link and email it to the person you would like to contribute to this application. After signing in, through DfE sign-in, they will be able to view and change the application but will not be able to submit it.
+        </p>
+
+        {% from "govuk/components/textarea/macro.njk" import govukTextarea %}
+
+        {{ govukTextarea({
+           name: "more-detail",
+           id: "more-detail",
+           label: {
+              text: "Copy the link and send it to the contributor",
+               classes: "govuk-label--s",
+               isPageHeading: true
+                }
+          }) }}
+
+
+      </div>
+    </div>
+
+  </main>
+</div>
+
+
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{{ govukButton({
+  text: "Copy link"
+}) }}
+
+
+<br>
+<a href="/index.html" class="govuk-back-link">Return to application</a>
+{% endblock %}
