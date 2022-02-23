@@ -5,11 +5,7 @@
 {% endblock %}
 
 
-
-
 {% block content %}
-
-<a href="/index.html" class="govuk-back-link">Back</a>
 
 <span class="govuk-caption-l">Oasis Academy Brislington</span>
 <h1 class="govuk-heading-l">About the conversion</h1>
@@ -250,10 +246,9 @@
 {% from "govuk/components/button/macro.njk" import govukButton %}
 
 {{ govukButton({
-  text: "Save and return to your application"
+  text: "Save and return to your application",
+  href: "/index.html"
 }) }}
 
-<br>
-<a href="/index.html" class="govuk-back-link">Back</a>
 {% endblock %}
 
