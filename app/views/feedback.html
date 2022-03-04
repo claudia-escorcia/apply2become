@@ -1,27 +1,63 @@
+
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Trust Consent - Apply to become an academy
+  Application complete - Apply to become an academy
 {% endblock %}
 
 {% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      {{ govukPanel({
+        titleText: "Application complete",
+        html: "Your reference number<br><strong>A2B0256</strong>"
+      }) }}
 
-<div class="govuk-width-container">
-  <a href="/index.html" class="govuk-back-link">Return to application</a>
+      <p class="govuk-body">We have sent you a confirmation email.</p>
 
-  <main class="govuk-main-wrapper">
+      <h2 class="govuk-heading-m">What happens next</h2>
 
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column-two-thirds">
-        
-        <h1 class="govuk-heading-l">Feedback footer example</h1>
-        <p class="govuk-body">Lorem ipsum dolor sit amet, amet possit ex qui, ad pri agam quot. Ea summo delectus officiis est, ne elitr alienum ius. No alienum definiebas per. Usu ad populo aliquam. Vis wisi option ea, nec iisque eruditi maiorum ad.
+      <p class="govuk-body">
+        It takes us 2 to 6 weeks to assess your application and grant your academy order, if you're successful.
+      </p>
+      <p class="govuk-body">
+        Your project lead will contact you if they need to check anything.
+      </p>
+      <p class="govuk-body">
+        <a href="#" class="govuk-link">What did you think of this service?</a> (takes 30 seconds)
+      </p>
+
+      <h2 class="govuk-heading-m">Support</h2>
+      <p class="govuk-body">
+      If have any queries about the progress of your application, please contact the Department for Education.
+        <br><br>
+      If you have any questions or comments about this service, e-mail applytoconvert.support@education.gov.uk
+        <br><br>
+        As we continue to develop this service we would value your feedback on your experience. Please <a href="#" class="govuk-link"> complete our short survey.</a> The survey takes around 10 minutes to complete
         </p>
-      </div>
+<!--
+      <h2 class="govuk-heading-m">If your application is successful</h2>
+
+      <p class="govuk-body">
+        <a href="#" class="govuk-link">Prepare for conversion</a>
+      </p>
+      
+       
+        <p>
+            These are the main steps in the conversion process:
+  
+        </p>
+      -->
     </div>
 
-  </main>
-  <a href="/index.html" class="govuk-back-link">Return to application</a>
-</div>
+    
+  </div>
 
+<a href="/index.html" class="govuk-back-link">Back</a>
+  
 {% endblock %}
+
+{% set mainClasses = "govuk-main-wrapper--l" %}
+
+{% from "govuk/components/panel/macro.njk" import govukPanel %}
+
