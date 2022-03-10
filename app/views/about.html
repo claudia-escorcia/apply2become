@@ -1,15 +1,11 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  About the conversion - Apply to become an Academy
+  About the conversion - Apply to become an academy
 {% endblock %}
 
 
-
-
 {% block content %}
-
-<a href="/index.html" class="govuk-back-link">Back</a>
 
 <span class="govuk-caption-l">Oasis Academy Brislington</span>
 <h1 class="govuk-heading-l">About the conversion</h1>
@@ -17,6 +13,7 @@
 {% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
 <h2 class="govuk-heading-m">The school joining the trust</h2>
 {{ govukSummaryList({
+  classes: 'govuk-!-margin-bottom-9',
   rows: [
     {
       key: {
@@ -30,7 +27,7 @@
           {
             href: "#",
             text: "Change",
-            visuallyHiddenText: "Change the name of the school"
+            visuallyHiddenText: "the name of the school"
           }
         ]
       }
@@ -42,6 +39,7 @@
 {% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
 <h2 class="govuk-heading-m">Contact details</h2>
 {{ govukSummaryList({
+  classes: 'govuk-!-margin-bottom-9',
   rows: [
     {
       key: {
@@ -55,7 +53,7 @@
           {
             href: "#",
             text: "Change",
-            visuallyHiddenText: "change Name of the headteacher"
+            visuallyHiddenText: "name of the headteacher"
           }
         ]
       }
@@ -72,7 +70,7 @@
           {
             href: "#",
             text: "Change",
-            visuallyHiddenText: "change Headteacher's email address"
+            visuallyHiddenText: "headteacher's email address"
           }
         ]
       }
@@ -89,7 +87,7 @@
           {
             href: "#",
             text: "Change",
-            visuallyHiddenText: "change Headteacher's telephone number"
+            visuallyHiddenText: "headteacher's telephone number"
           }
         ]
       }
@@ -106,7 +104,7 @@
           {
             href: "#",
             text: "Change",
-            visuallyHiddenText: "change Name of the chair of the governing body"
+            visuallyHiddenText: "name of the chair of the governing body"
           }
         ]
       }
@@ -123,7 +121,7 @@
           {
             href: "#",
             text: "Change",
-            visuallyHiddenText: "change chair's email address"
+            visuallyHiddenText: "chair's email address"
           }
         ]
       }
@@ -140,7 +138,7 @@
           {
             href: "#",
             text: "Change",
-            visuallyHiddenText: "change chair's telephone number"
+            visuallyHiddenText: "chair's telephone number"
           }
         ]
       }
@@ -157,7 +155,7 @@
           {
             href: "#",
             text: "Change",
-            visuallyHiddenText: "change the main contact for the conversion?"
+            visuallyHiddenText: "the main contact for the conversion"
           }
         ]
       }
@@ -174,7 +172,7 @@
           {
             href: "#",
             text: "Change",
-            visuallyHiddenText: "change approver's full name"
+            visuallyHiddenText: "approver's full name"
           }
         ]
       }
@@ -191,7 +189,7 @@
           {
             href: "#",
             text: "Change",
-            visuallyHiddenText: "change Approver's email address"
+            visuallyHiddenText: "approver's email address"
           }
         ]
       }
@@ -202,6 +200,7 @@
 {% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
 <h2 class="govuk-heading-m">Date of conversion</h2>
 {{ govukSummaryList({
+  classes: 'govuk-!-margin-bottom-9',
   rows: [
     {
       key: {
@@ -215,7 +214,7 @@
           {
             href: "#",
             text: "Change",
-            visuallyHiddenText: "Change the date of the conversion"
+            visuallyHiddenText: "the date of the conversion"
           }
         ]
       }
@@ -226,6 +225,7 @@
 {% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
 <h2 class="govuk-heading-m">Reasons for joining</h2>
 {{ govukSummaryList({
+  classes: 'govuk-!-margin-bottom-9',
   rows: [
     {
       key: {
@@ -239,7 +239,7 @@
           {
             href: "#",
             text: "Change",
-            visuallyHiddenText: "name why does the school want to join this trust"
+            visuallyHiddenText: "why does the school want to join this trust"
           }
         ]
       }
@@ -250,10 +250,9 @@
 {% from "govuk/components/button/macro.njk" import govukButton %}
 
 {{ govukButton({
-  text: "Save and return to your application"
+  text: "Save and return to your application",
+  href: "/index.html"
 }) }}
 
-<br>
-<a href="/index.html" class="govuk-back-link">Back</a>
 {% endblock %}
 

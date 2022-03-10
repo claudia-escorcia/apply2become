@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Trust Consent - Apply to become an Academy
+  Trust consent - Apply to become an academy
 {% endblock %}
 
 {% block content %}
@@ -26,10 +26,7 @@
         {{ govukInsetText({
         text: "The application cannot be submitted without this. You can carry on the application and come back to this later."
         }) }}
-      </div>
-    </div>
-  </main>
-</div>
+      
 
 {% from "govuk/components/file-upload/macro.njk" import govukFileUpload %}
 
@@ -61,4 +58,8 @@
 
 <br>
 <a href="/index.html" class="govuk-back-link">Back</a>
+</div>
+</div>
+</main>
+</div>
 {% endblock %}
