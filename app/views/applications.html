@@ -9,20 +9,65 @@
 <div class="govuk-width-container">
     <main class="govuk-main-wrapper govuk-main-wrapper--l">
       <div class="govuk-grid-row">
-        <div class="govuk-grid-column-two-thirds">
+       
+
+        <div class="govuk-grid-column-full">
          <h1 class="govuk-heading-l">Your applications</h1>
           {{ govukButton({
             text: "Start new application"
           }) }}
           
-          <h2 class="govuk-heading-m">Applications in progress</h2>
+         
 
-          <p class="govuk-body govuk-!-margin-bottom-0"> HARPENDEN ACADEMY TRUST application</p>
-          <p class="govuk-body-s govuk-!-margin-bottom-0">St George's School</p>
-          <a href="#" class="govuk-link">View application</a>
-          <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+          <table class="govuk-table">
+            <caption class="govuk-table__caption govuk-table__caption--m">Applications in progress (3)</caption>
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header app-custom-class">Type of application</th>
+                <th scope="col" class="govuk-table__header app-custom-class">Trust name</th>
+                <th scope="col" class="govuk-table__header app-custom-class">Academy name</th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header govuk-!-font-weight-regular">Join a multi-academy trust<br>
+                  <a href="#" class="govuk-link">Application A2B_0576</a></th>
+                <td class="govuk-table__cell">The Diocese of Ely multi-academy trust</td>
+                <td class="govuk-table__cell">Cambridge Regional College</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header govuk-!-font-weight-regular">Form a new multi-academy trust<br>
+                  <a href="#" class="govuk-link">Application A2B_0576</a></th>
+                <td class="govuk-table__cell">Cambs multi-academy example trust</td>
+                <td class="govuk-table__cell">Fen Ditton primary school</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header govuk-!-font-weight-regular">Form a new single academy trust<br>
+                  <a href="#" class="govuk-link">Application A2B_0576</a></th>
+                <td class="govuk-table__cell">Single academy trust example</td>
+                <td class="govuk-table__cell">King’s College London Maths school</td>
+              </tr>
+            </tbody>
+          </table>
 
-          <!-- <h2 class="govuk-heading-m">Completed applications</h2> -->
+          <table class="govuk-table">
+            <caption class="govuk-table__caption govuk-table__caption--m">Applications completed (1)</caption>
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header app-custom-class">Type of application</th>
+                <th scope="col" class="govuk-table__header app-custom-class">Trust name</th>
+                <th scope="col" class="govuk-table__header app-custom-class">Academy name</th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header govuk-!-font-weight-regular">Form a new multi-academy trust<br>
+                  <a href="#" class="govuk-link">Download application</a></th>
+                <td class="govuk-table__cell">Harpenden Academy trust</td>
+                <td class="govuk-table__cell">St. George's school</td>
+              </tr>
+              </tbody>
+              </table>
           
         </div>
       </div>
