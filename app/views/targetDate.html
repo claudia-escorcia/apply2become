@@ -4,26 +4,10 @@
   Apply to become an Academy
 {% endblock %}
 
-{% block header %}
-  <!-- Blank header with no service name for the start page -->
-  {{ govukHeader() }}
-{% endblock %}
 
-{% block beforeContent %} <!--
-{% from "govuk/components/textarea/macro.njk" import govukTextarea %}
+{% block beforeContent %} 
+<!--
 
-{{ govukTextarea({
-  name: "more-detail",
-  id: "more-detail",
-  label: {
-    text: "Can you provide more detail?",
-    classes: "govuk-label--l",
-    isPageHeading: true
-  },
-  hint: {
-    text: "Do not include personal or financial information, like your National Insurance number or credit card details."
-  }
-}) }}
 -->
 {% endblock %}
 
@@ -36,26 +20,51 @@
         Conversion target date
       </h1>
 
+      <h2 class="govuk-heading-s">Do you want the conversion to happen on a particular month?</h2>
+      <div class="govuk-inset-text">
+        A conversion usually takes around 6 months. It may take longer if the school is part of a private finance initiative (PFI) contract. <br> <br>
+        Conversions will happen on the first day of the month selected.
+      </div>
 
-      {% from "govuk/components/radios/macro.njk" import govukRadios %}
-      {% from "govuk/components/input/macro.njk" import govukInput %}
 
-      {% set emailHtml %}
-      {% from "govuk/components/date-input/macro.njk" import govukDateInput %}
+      
 
-      {{ govukDateInput({
-        id: "conversion-date",
-        namePrefix: "conversion-date",
-                hint: {
-          text: "For example, 3 2023"
-        }
-      }) }}
 
+      {% set yesHtml %}
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+          
+          <div id="passport-issued-hint" class="govuk-hint">
+            For example, 3 2007
+          </div>
+          <div class="govuk-date-input" id="passport-issued">
+           
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                  Month
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" pattern="[0-9]*" inputmode="numeric">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                  Year
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" pattern="[0-9]*" inputmode="numeric">
+              </div>
+            </div>
+          </div>
+      
+        </fieldset>
+      </div>
+     
       {{ govukTextarea({
-        id: "contact-by-email",
-        name: "contact-by-email",
-        type: "email",
-        autocomplete: "email",
+        id: "yes-date",
+        name: "yes-date",
+        type: "date",
         classes: "govuk-!-width-two-thirds",
         label: {
           text: "Explain why you want to convert on this month"
@@ -67,41 +76,31 @@
 
 
 {{ govukRadios({
-  idPrefix: "contact",
-  name: "contact",
-  fieldset: {
-    legend: {
-      text: "Do you want the conversion to happen on a particular month?",
-      isPageHeading: true,
-      classes: "govuk-fieldset__legend--s"
-     }
-    },
-  hint: {
-    text: "A conversion usually takes around 6 months. It may take longer if the school is part of a private finance initiative (PFI) contract. Conversions will happen on the first day of the month selected."
-    },
+  idPrefix: "date",
+  name: "date",
+  
   items: [
     {
-      value: "email",
+      value: "yes",
       text: "Yes",
       conditional: {
-        html: emailHtml
+        html: yesHtml
       }
     },
     {
-      value: "phone",
+      value: "no",
       text: "No",
       conditional: {
-        html: phoneHtml
+        html: noHtml
       }
     }
   ]
 }) }}
 
 
-{% from "govuk/components/button/macro.njk" import govukButton %}
-
 {{ govukButton({
-  text: "Save and continue"
+  text: "Save and continue",
+  href: "/index.html"
 }) }}
 
       
